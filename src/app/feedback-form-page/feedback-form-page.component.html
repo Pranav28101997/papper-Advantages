@@ -1,0 +1,68 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav sidenav" mode="side">
+        <div class="side-navigation">
+            <div class="header">
+                <div>
+                    <img src="assets\icons\companyName.svg" />
+                </div>
+                <div style="cursor: pointer;" (click)="drawer.toggle()">
+                    <img src="assets\icons\cross.svg" />
+                </div>
+            </div>
+            <div class="vector-line"> <img src="assets\icons\vector_line.svg" /></div>
+            <div class="menu" (click)="navigateToHomePage()">
+                <span><img src="assets\icons\home.svg" /></span>
+                <span class="home">{{translations?.sideNavBar?.home}}</span>
+            </div>
+        </div>
+    </mat-drawer>
+    <div>
+        <app-header-section (openSideBar)="drawer.toggle()"></app-header-section>
+        <div class="feedback-container">
+            <div class="add-feedback-heading">
+                <div class="title">
+                    {{translations?.addFeedback?.addFeedback}}
+                </div>
+                <div class="breadcrumb">
+                    <span class="home" (click)="navigateToHomePage()">
+                        {{translations?.addFeedback?.home}}
+                    </span>
+                    <span class="separator">
+                        /
+                    </span>
+                    <span class="feedback-form">
+                        {{translations?.addFeedback?.feedbackFormButton}}
+                    </span>
+                </div>
+            </div>
+            <div class="feedback-form-heading">
+                {{translations?.addFeedback?.feedbackForm}}
+            </div>
+            <form [formGroup]="ratingForm" class="add-feedback-form">
+                <div class="add-feedback">
+                    <div class="feedback-input">
+                        {{translations?.addFeedback?.feedbackInput}}
+                    </div>
+                    <div class="input-feild">
+                        <input type="text" formControlName="ratingComment" class="add-feedback-box" required>
+                    </div>
+                </div>
+                <div class="ratings-cointainer">
+                    <div class="rating">
+                        {{translations?.addFeedback?.rating}}
+                    </div>
+                    <div class="rating-cointainer">
+                        <app-rating-star [rating]="rating" [starCount]="starCount"
+                            (ratingUpdated)="onRatingChanged($event)"></app-rating-star>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="back-button" type="submit"
+                        (click)="navigateToHomePage()">{{translations?.addFeedback?.back}}</button>
+                    <button class="submit-button" type="submit"
+                        (click)="onSubmit()">{{translations?.addFeedback?.submitForm}}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-drawer-container>

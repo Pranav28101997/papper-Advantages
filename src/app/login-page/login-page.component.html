@@ -1,0 +1,49 @@
+<div class="login-container">
+    <div class="login-felids">
+        <div class="icon-cointainer">
+            <div>
+                <img src="assets\icons\pepper.svg" />
+            </div>
+            <div class="separator">
+            </div>
+            <div>
+                <img src="assets\icons\advantage.svg" />
+            </div>
+        </div>
+        <div class="welcome-click">
+            <span class="welcome-text">
+                {{translations?.loginPage?.welcome}}
+            </span>
+            <span class="click-below">
+                {{translations?.loginPage?.click}}
+            </span>
+        </div>
+        <div class="container">
+            <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="input-container">
+                    <label for="username">{{translations?.loginPage?.Username}}</label>
+                    <input class="input-box" formControlName="username" placeholder="Enter your username" [ngClass]="{
+                    'border-red':username?.invalid && (username?.dirty || username?.touched)
+                }" required>
+                    <span class="text-danger"
+                        *ngIf="username?.invalid && (username?.dirty || username?.touched)">{{translations?.loginPage?.errorMessage}}</span>
+                </div>
+                <div class="input-container">
+                    <label for="password">{{translations?.loginPage?.Password}}</label>
+                    <input class="input-box" formControlName="password" placeholder="Enter your password" [ngClass]="{
+                    'border-red': password?.invalid && (password?.dirty || password?.touched)
+                }" required>
+                    <span class="text-danger"
+                        *ngIf="password?.invalid && (password?.dirty || password?.touched)">{{translations?.loginPage?.errorMessagePassword}}</span>
+                </div>
+                <button class="submit-button" type="submit"
+                    (click)="onSubmit()">{{translations?.loginPage?.signIn}}</button>
+            </form>
+            <div class="footer-notes">
+                <span class="help"> {{translations?.loginPage?.helpText}}</span>
+                <span class="contact">{{translations?.loginPage?.contact}}</span>
+            </div>
+        </div>
+    </div>
+
+</div>

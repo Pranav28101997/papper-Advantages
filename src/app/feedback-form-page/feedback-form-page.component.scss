@@ -1,0 +1,156 @@
+@import '../../assets/styles/variable.scss';
+@import '../../assets/styles/mixins.scss';
+
+.feedback-container {
+    display: flex;
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    flex-shrink: 0;
+
+    .add-feedback-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        align-self: stretch;
+
+        .title {
+            color: $black;
+            @include feedback-title;
+        }
+
+        .breadcrumb {
+            display: flex;
+            padding: 10px;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 5px;
+            background: $off-white;
+
+            .home {
+                color: $ivory;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+                cursor: pointer;
+            }
+
+            .separator {
+                color: $ivory;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+            }
+
+            .feedback-form {
+                color: var(--primary-colours-red-df-0024, #DF0024);
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px;
+            }
+        }
+    }
+
+    .feedback-form-heading {
+        @include feedback-form-title;
+    }
+
+    .add-feedback-form {
+        width: 100%;
+
+        .add-feedback {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            width: 100%;
+            flex: 1 0 0;
+
+            .feedback-input {
+                color: #000;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+            }
+
+            .input-feild {
+                display: flex;
+                align-self: stretch;
+                height: 100px;
+
+                .add-feedback-box {
+                    display: flex;
+                    padding: 12px;
+                    align-items: flex-start;
+                    gap: 8px;
+                    flex: 1 0 0;
+                    align-self: stretch;
+                    border-radius: 4px;
+                    border: 1px solid var(--light-forms-border, #CBD5E1);
+                    background: var(--light-forms-background, #FFF);
+                }
+            }
+        }
+
+        .ratings-cointainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+
+            .rating {
+                @include rating;
+                margin-top: 12px;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            height: 340px;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            flex-shrink: 0;
+            align-self: stretch;
+
+            .back-button {
+                display: flex;
+                padding: 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 4px;
+                border: 1px solid $purple;
+                background: $white;
+                cursor: pointer;
+                @include back-button;
+
+            }
+
+            .submit-button {
+                display: flex;
+                padding: 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 4px;
+                background: $purple;
+                cursor: pointer;
+                @include submit-button;
+            }
+        }
+    }
+}

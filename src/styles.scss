@@ -1,0 +1,97 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$pepper-advantage-primary: mat.define-palette(mat.$indigo-palette);
+$pepper-advantage-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$pepper-advantage-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$pepper-advantage-theme: mat.define-light-theme((
+  color: (
+    primary: $pepper-advantage-primary,
+    accent: $pepper-advantage-accent,
+    warn: $pepper-advantage-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($pepper-advantage-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import './assets/styles/variable.scss';
+@import './assets/styles/mixins.scss';
+
+.side-navigation {
+  display: inline-flex;
+  height: 669px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  background: $white;
+
+  .header {
+      display: flex;
+      width: 240px;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+      height: 48px;
+      padding-bottom: 0px;
+  }
+
+  .vector-line {
+      width: 240px;
+      height: 0px;
+      stroke-width: 2px;
+      stroke: $gray-dark-grey;
+      margin-bottom: 24px;
+  }
+
+  .menu {
+      display: flex;
+      padding: 0px 10px;
+      height: 46px;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 5px;
+      border-left: 5px solid $dark-red;
+      background: rgba(65, 25, 65, 0.30);
+      cursor: pointer;
+
+      .home {
+          display: flex;
+          justify-content: center;
+      }
+  }
+}
+.border-red {
+	border: 1px solid #da1e28 !important;
+}
+.text-danger {
+	@include small-text;
+  color: red !important;
+}
+.visibility-hidden {
+	visibility: hidden;
+}

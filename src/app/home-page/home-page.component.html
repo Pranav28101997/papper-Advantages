@@ -1,0 +1,44 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav sidenav" mode="side">
+        <div class="side-navigation">
+            <div class="header">
+                <div>
+                    <img src="assets\icons\companyName.svg" />
+                </div>
+                <div style="cursor: pointer;" (click)="drawer.toggle()">
+                    <img src="assets\icons\cross.svg" />
+                </div>
+            </div>
+            <div class="vector-line"> <img src="assets\icons\vector_line.svg" /></div>
+            <div class="menu">
+                <span><img src="assets\icons\home.svg" /></span>
+                <span class="home">{{translations?.sideNavBar?.home}}</span>
+            </div>
+        </div>
+
+    </mat-drawer>
+    <div class="home-container">
+        <app-header-section (openSideBar)="drawer.toggle()"></app-header-section>
+        <div class="feedback-container">
+            <div class="greeting">
+                {{translations?.homePage?.welcome}}
+            </div>
+            <div class="table-header">
+                <span class="list-text">{{translations?.homePage?.feedback}}</span>
+                <div class="add-button" (click)="addNewFeedback()">
+                    <span>
+                        <img src="assets\icons\plus.svg" />
+                    </span>
+                    <span class="add-new">{{translations?.homePage?.Add}}</span>
+                </div>
+            </div>
+            <div class="table">
+                <ng-container *ngFor="let feedback of feedbackCollection">
+                    <app-feedback-card [feedbackData]="feedback" class="feedback-card">
+                    </app-feedback-card>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+</mat-drawer-container>

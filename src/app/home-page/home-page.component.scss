@@ -1,0 +1,68 @@
+@import '../../assets/styles/variable.scss';
+@import '../../assets/styles/mixins.scss';
+
+.home-container {
+    .feedback-container {
+        display: flex;
+        width: 94%;
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        .greeting {
+            @include welcome-text;
+        }
+
+        .table-header {
+            display: flex;
+            padding: 10px 16px;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            width: 100%;
+            border-top: 1px solid var(--light-surfaces-border, #E2E8F0);
+            background: $purple;
+
+            .list-text {
+                @include feedback-text;
+            }
+
+            .add-button {
+                display: flex;
+                padding: 8px 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-top: 1px solid var(--light-surfaces-border, #E2E8F0);
+                background: var(--secondary-colours-purple-411941, #411941);
+                cursor: pointer;
+
+                .add-new {
+                    color: var(--light-text-inverse-text, #FFF);
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-family: Roboto;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        .table {
+            display: flex;
+            padding: 10px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            width: 100%;
+
+            .feedback-card {
+                width: 100%;
+            }
+        }
+    }
+
+}

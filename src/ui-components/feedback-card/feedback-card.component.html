@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="thumbnail-container">
+        <div class="user-thumbnail">
+            <span class="thumbnail">
+                U1
+            </span>
+        </div>
+    </div>
+    <div class="feedback-message">
+        {{feedbackData?.comment}}
+    </div>
+    <div class="rating">
+        <app-rating-star [rating]="feedbackData?.rating" [starCount]="feedbackData?.starCount"></app-rating-star>
+    </div>
+    <div class="date">
+        14/06/2023
+    </div>
+</div>

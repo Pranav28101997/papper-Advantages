@@ -1,0 +1,163 @@
+@import './variable.scss';
+
+@mixin small-text {
+        color: $white;
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 14px;
+        text-transform: capitalize;
+}
+
+@mixin large-text {
+        color: $purple;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23px;
+}
+
+@mixin medium-text {
+        color: $purple;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 15px;
+}
+
+@mixin thumbnail-text {
+        color: $white;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        text-transform: uppercase;
+}
+
+@mixin welcome-text {
+        color: $black;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+}
+
+@mixin feedback-text {
+        color: $white;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+}
+
+@mixin feedBack-message {
+        color: $black;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+}
+
+@mixin date-text {
+        color: $typography-label;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+}
+
+@mixin input-label {
+        color: $purple;
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23px;
+}
+
+@mixin placeholder-text {
+        color: lightgrey;
+        font-size: 12px;
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: Roboto;
+        font-style: normal;
+        line-height: 23px;
+        font-weight: 300;
+}
+
+@mixin feedback-title {
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+}
+
+@mixin feedback-form-title {
+        color: $black;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+}
+
+@mixin rating {
+        color: $black;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+}
+
+@mixin back-button {
+        color: $purple;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+}
+
+@mixin submit-button {
+        color:$white;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+}
+
+@mixin home-button {
+        color: $purple;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+}

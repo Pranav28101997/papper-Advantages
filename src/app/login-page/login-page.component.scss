@@ -1,0 +1,142 @@
+@import '../../assets/styles/variable.scss';
+@import '../../assets/styles/mixins.scss';
+
+.login-container {
+    display: flex;
+    width: 100%;
+    padding: 205.287px 0px 206.715px 0px;
+    justify-content: center;
+    align-items: center;
+    background: $login-background;
+    height: $webkit-fill;
+
+    .login-felids {
+        display: flex;
+        align-items: flex-start;
+        padding: 50px 80px;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: 4px;
+        background: $white;
+
+        .container {
+            background-color: #fff;
+            width: 100%;
+
+            .login-form {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                margin-bottom: 12px;
+            }
+
+            .input-container {
+                margin-bottom: 12px;
+            }
+
+            label {
+                display: block;
+                @include input-label
+            }
+
+            input {
+                padding: 10px 0px;
+                border-radius: 4px;
+                width: 92%;
+                outline: none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+            }
+
+            .input-box {
+                display: block;
+                background: transparent;
+                border: none;
+                border-width: 0;
+                border-color: transparent;
+                font-size: 12px;
+                font-family: inherit;
+                font-weight: 500;
+                transition: .2s;
+                color: $purple;
+                cursor: text;
+                -webkit-transition: all 0.28s ease;
+                transition: all 0.28s ease;
+            }
+
+            input::placeholder {
+                @include placeholder-text;
+            }
+        }
+
+        .welcome-click {
+            display: flex;
+            flex-direction: column;
+
+            .welcome-text {
+                @include large-text;
+            }
+
+            .click-below {
+                @include medium-text;
+            }
+        }
+
+        .icon-cointainer {
+            display: flex;
+            width: 304.5px;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 7.229px;
+
+            .separator {
+                width: 1px;
+                height: 30px;
+                background: $dark-red;
+            }
+
+        }
+
+        .submit-button {
+            display: flex;
+            height: 40px;
+            padding: 0px 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            align-self: stretch;
+            border-radius: 4px;
+            background: $dark-blue;
+            cursor: pointer;
+            @include small-text;
+        }
+
+        .footer-notes {
+            display: flex;
+            flex-direction: column;
+
+            .help {
+                color: $purple;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Roboto;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 15px;
+            }
+
+            .contact {
+                opacity: 0.800000011920929;
+                color: $purple;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: Roboto;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 15px;
+                text-decoration-line: underline;
+            }
+        }
+    }
+}

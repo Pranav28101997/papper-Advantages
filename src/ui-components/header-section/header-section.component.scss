@@ -1,0 +1,100 @@
+@import '../../assets/styles/variable.scss';
+@import '../../assets/styles/mixins.scss';
+
+.header-section {
+    width: 100%;
+    height: 70px;
+    flex-shrink: 0;
+    border-bottom: $border-line;
+    background: $white;
+    display: flex;
+
+    .side-bar {
+        display: flex;
+        width: 58px;
+        height: 58px;
+        padding: 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+
+        .icon-cointainer {
+            cursor: pointer;
+        }
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        padding: 12px 12px 12px 0px;
+        justify-content: space-between;
+        gap: 8px;
+        width: 94%;
+
+        .header-titles {
+            display: flex;
+            flex-direction: row;
+            padding: 12px 0px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+            margin-top: 12px;
+
+            .pepper-title {
+                height: 14px;
+                width: 50px;
+            }
+
+            .advantage-title {
+                height: 16px;
+                width: 72px;
+            }
+
+
+            .company-title {
+                display: flex;
+                flex-direction: row;
+                padding: 12px 0px;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+                flex-shrink: 0;
+            }
+
+            .separator {
+                width: 1px;
+                height: 22px;
+                background: $dark-red;
+            }
+        }
+
+        .help-icons {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+
+            .help {
+                margin-right: 20px;
+            }
+
+            .user-thumbnail {
+                display: flex;
+                width: 24px;
+                height: 24px;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 20px;
+                background: $dark-red;
+                margin-left: 20px;
+
+                .thumbnail {
+                    @include thumbnail-text;
+                }
+            }
+        }
+    }
+}

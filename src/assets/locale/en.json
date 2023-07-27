@@ -1,0 +1,33 @@
+{
+    "loginPage" : {
+        "welcome" : "Welcome Back!",
+        "click":"Click below to sign in.",
+        "signIn":"Sign In",
+        "userName":"Username",
+        "password":"Password",
+        "helpText":"Facing issues with your account?",
+        "contact": "Contact support",
+        "errorMessage":"Enter valid username",
+        "errorMessagePassword":"Enter valid password"
+
+    },
+    "homePage": {
+        "welcome" :"Welcome Back User 01!",
+        "feedback": "Feedback List",
+        "Add" : "Add New"
+    },
+    "addFeedback" :{
+        "addFeedback" :"Add New Feedback",
+        "feedbackForm" :"Feedback form",
+        "feedbackInput":"Feedback Input",
+        "rating":"Rating",
+        "home":"Home",
+        "feedbackFormButton":"Feedback Form",
+        "back":"Back",
+        "submitForm":"Submit Form"
+    },
+    "sideNavBar" : {
+        "home": "Home"
+    }
+
+}

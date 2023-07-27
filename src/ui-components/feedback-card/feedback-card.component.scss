@@ -1,0 +1,49 @@
+@import '../../assets/styles/variable.scss';
+@import '../../assets/styles/mixins.scss';
+
+.card {
+    display: flex;
+    padding: 16px 0px;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    border-radius: 5px;
+    border: 1px solid $strock-light;
+    background: $gray-light-grey;
+
+    .thumbnail-container {
+        width: 4%;
+
+        .user-thumbnail {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 20px;
+            background: $dark-red;
+            margin-left: 20px;
+
+            .thumbnail {
+                @include thumbnail-text;
+            }
+        }
+    }
+
+    .rating {
+        width: 20%;
+    }
+
+    .feedback-message {
+        @include feedBack-message;
+        width: 75%;
+        // margin-left: 12px;
+    }
+
+    .date {
+        @include date-text;
+        margin-right: 16px;
+    }
+}
