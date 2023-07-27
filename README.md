@@ -1,8 +1,8 @@
- Node Version v14.17.6
- Npm version 6.14.15
 # PepperAdvantage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
+ Node Version v14.17.6
+ Npm version 6.14.15
 
 ## Development server
 
